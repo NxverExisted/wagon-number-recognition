@@ -1,0 +1,5 @@
+﻿ultralytics==8.4.214
+easyocr==1.7.2
+opencv-python==5.0.0.93
+numpy==2.2.6
+PyYAML==6.0.3
