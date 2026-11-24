@@ -1,0 +1,45 @@
+ Команды обучения модели YOLO11n-Seg
+
+1. Параметры обучения
+
+- Архитектура: YOLO11n-Seg
+- Предварительно обученные веса: yolo11n-seg.pt
+- Датасет: dataset/data.yaml
+- Количество эпох: 100
+- Размер изображения: 640×640
+- Размер batch: 2
+- Устройство: GPU (device=0)
+- Workers: 0
+- Видеокарта: NVIDIA GeForce GTX 1060 6GB
+
+2. Команда запуска обучения
+
+в строку powershell:
+yolo segment train model=yolo11n-seg.pt data=dataset/data.yaml epochs=100 imgsz=640 batch=2 device=0 workers=0
+
+
+3. Результаты обучения
+
+Обучение успешно завершилось после 100 эпох.
+
+Время обучения: около 0.826 часа.
+
+Результаты сохранены в:
+
+
+runs/segment/train/
+
+
+Основные файлы обученной модели:
+
+
+runs/segment/train/weights/best.pt
+runs/segment/train/weights/last.pt
+
+
+- best.pt — веса модели с лучшим результатом на валидации.
+- last.pt — веса модели после последней эпохи.
+
+На момент запуска обучения терминал находился в C:\wagon_dataset, а виртуальное окружение .venv было активировано.
+
+команда запускалась из папки проекта, где лежал dataset/data.yaml
